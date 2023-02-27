@@ -17,10 +17,11 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Login Logout Action
-@tag1
-Scenario: Successful Login with Valid Credentials
-	Given User is on Home Page
-	When User Navigate to LogIn Page and User enters UserName and Password
-	Then Message displayed Login Successfully
-	Then User LogOut from the Application
+Feature: Select value from dropdown
+  I want to select value from dorpdown
+
+  @tag1
+  Scenario: Select value from dropdown
+    Given User navigate to Select Country Dropdown screen
+    And User click on country Dropdown and to select the value
+    

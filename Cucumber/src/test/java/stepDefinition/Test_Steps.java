@@ -15,6 +15,7 @@ import io.cucumber.java.en.When;
 public class Test_Steps {
 	
 	public static WebDriver driver;
+	@SuppressWarnings("deprecation")
 	@Given("^User is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
         driver = new ChromeDriver();
@@ -23,7 +24,7 @@ public class Test_Steps {
 		}
 
 
-	@And("^User Navigate to LogIn Page and User enters UserName and Password$")
+	@When("^User Navigate to LogIn Page and User enters UserName and Password$")
 	public void user_enters_UserName_and_Password() throws Throwable {
 		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("student");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Password123");
@@ -36,16 +37,13 @@ public class Test_Steps {
         System.out.println(Actual.getText());
 	}
 
-	@When("^User LogOut from the Application$")
+	@Then("^User LogOut from the Application$")
 	public void user_LogOut_from_the_Application() throws Throwable {
 		 driver.findElement(By.xpath("//a[contains(text(),'Log out')]")).click();
 	        System.out.println("Successfully Logged out");
+	        driver.quit();
+	        
 	}
 
-	@Then("^Message displayed Logout Successfully$")
-	public void message_displayed_Logout_Successfully() throws Throwable {
-        System.out.println("LogOut Successfully");
-        driver.quit();
-	}
 
 }

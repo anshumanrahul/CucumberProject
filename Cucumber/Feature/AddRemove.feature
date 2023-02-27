@@ -17,10 +17,11 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Login Logout Action
-@tag1
-Scenario: Successful Login with Valid Credentials
-	Given User is on Home Page
-	When User Navigate to LogIn Page and User enters UserName and Password
-	Then Message displayed Login Successfully
-	Then User LogOut from the Application
+Feature: Add Remove Element
+  When user click on Add element button Delete button is getting displayed. 
+
+  @tag1
+  Scenario: User is on Add/Remove Elements screen
+    Given User is on Add/Remove Elements screen
+    When User click on Add Element button
+    Then Delete button should get displayed

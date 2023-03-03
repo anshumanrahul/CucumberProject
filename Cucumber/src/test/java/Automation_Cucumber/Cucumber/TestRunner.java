@@ -7,8 +7,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "Feature"
+		features = "C:\\Users\\Rahul.Anshuman\\git\\CucumberProject\\Cucumber\\Feature"
 		,glue={"stepDefinition"}
+		,plugin= {"pretty"}
+		,monochrome=true
 		)
 
 public class TestRunner {
